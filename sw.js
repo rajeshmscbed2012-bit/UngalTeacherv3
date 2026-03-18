@@ -1,8 +1,8 @@
 var CACHE = 'ungal-aasiriyar-v5';
-var SHELL = 'student-v3.html';
+var SHELL = 'index.html';
 
 var ASSETS = [
-  '/student-v3.html',
+  '/index.html',
   '/app.js',
   '/manifest.json',
   '/20260315_085358.png',
@@ -63,7 +63,7 @@ self.addEventListener('fetch', function(e) {
         return res;
       }).catch(function() {
         if (req.destination === 'document') {
-          return caches.match('/student-v3.html');
+          return caches.match('/index.html');
         }
       });
     })
